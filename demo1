@@ -1,0 +1,48 @@
+import React from 'react'
+import rocket from './rocket.webp'
+ import logo from './img3.jpg'
+ import "./Style.css"
+ import { useState} from 'react'
+
+
+const Card = () => {
+  const [name, setName] = useState('santhosh')
+  return (
+    <div className='div1'>
+      <div className='div2'>
+        <img className='img1' src={logo} alt="img" />
+        <div>
+          <div className='div3'>
+            <button className='btn1' onClick={()=>setName('hello')}> NEW FEATURES </button>
+
+            <button className='btn2'> WORKFLOW STAGES</button>
+            <div className='div4'>
+            <img className = 'img2'src={rocket} alt="img" />
+            <p className='logic'>Logic States</p>
+
+            </div>
+          <p className='p1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim incidunt quasi dicta sit fugiat 
+            dolores eum nostrum accusamus et optio beatae aliquid itaque eligendi, 
+            est harum officia corrupti quia eaque.</p>
+
+            <div className='div5'>
+            <p className='p1'>28th March 2023</p>
+            <p className='p7'>🕒4 mins</p>
+            
+            </div>
+            <p className='p2'>See more -- </p>
+            </div>
+
+            {
+              name==='santhosh' ? <p>First condition</p> : <p>Second condition</p>
+            }
+        </div>
+
+    </div>
+    </div>
+    
+  )
+}
+
+
+export default Card
